@@ -1,0 +1,18 @@
+1. To Build the Image
+    docker build .
+2. List Docker Images
+    docker image ls
+3. Remove the Image 
+    docker image rm <IMAGE ID>
+4. Create image with name
+    docker build -t <name> .
+5. To run the image(Creating Container)
+    docker run -d --name <container-name> <image-name>
+    -d is used to detach from cli so that cli can be used by us
+6. To list the containers
+    docker ps
+7. To remove container to force stop to delete running container
+    docker rm <container-name> -f
+8. Running container with PORT
+    docker run -p HOST_MACHINE_PORT(3000):NODE_CONTAINER_PORT(3000) -d --name <container-name> <image-name>
+
