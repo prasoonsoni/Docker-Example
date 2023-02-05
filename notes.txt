@@ -9,12 +9,17 @@
 5. To run the image(Creating Container)
     docker run -d --name <container-name> <image-name>
     -d is used to detach from cli so that cli can be used by us
-6. To list the containers
+6. To list the containers that are running
     docker ps
+    docker ps -a (list all the containers)
 7. To remove container to force stop to delete running container
     docker rm <container-name> -f
 8. Running container with PORT
     docker run -p HOST_MACHINE_PORT(3000):NODE_CONTAINER_PORT(3000) -d --name <container-name> <image-name>
 9. To get into the docker container
     docker exec -it <container-name> bash
-    
+10. Syncing updates to comtainer (syncing folder on local machine to docker container)
+    This is done using volumes
+    docker run -v pathtofolderonlocalmachine:pathtofolderoncontainer -p 3000:3000 -d --name <container-name> <image-name>
+11. To see the logs fo the container
+    docker logs <container-name>

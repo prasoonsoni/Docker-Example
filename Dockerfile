@@ -6,5 +6,5 @@ RUN npm install
 COPY . ./
 EXPOSE 3000
 # this is for running
-CMD [ "node","index.js" ]
+CMD [ "npm","run","dev" ]
 
