@@ -19,7 +19,7 @@
 9. To get into the docker container
     docker exec -it <container-name> bash
 10. Syncing updates to comtainer (syncing folder on local machine to docker container)
-    This is done using volumes
+    This is done using bind mount volume
     docker run -v pathtofolderonlocalmachine:pathtofolderoncontainer -p 3000:3000 -d --name <container-name> <image-name>
 11. To see the logs fo the container
     docker logs <container-name>
