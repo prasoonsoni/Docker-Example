@@ -15,4 +15,6 @@
     docker rm <container-name> -f
 8. Running container with PORT
     docker run -p HOST_MACHINE_PORT(3000):NODE_CONTAINER_PORT(3000) -d --name <container-name> <image-name>
-
+9. To get into the docker container
+    docker exec -it <container-name> bash
+    
